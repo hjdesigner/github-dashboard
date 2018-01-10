@@ -1,9 +1,6 @@
-import PI from './utils';
 
-function sum(a, b) {
-  return a + b;
+function getApiGithub(user) {
+  return user;
 }
 
-sum(1, 3);
-
-console.log(PI);
+export default getApiGithub;
