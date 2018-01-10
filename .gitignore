@@ -12,9 +12,11 @@ bin
 .sass-cache
 node_modules
 npm-debug.log
+coverage
 
 # Ignorar todos os diretorios e arquivos em um diretorio. ignore/*
 /nbproject/
 /ignore/
 /src/vendor/bower_components/
 /bower_components
+/coverage

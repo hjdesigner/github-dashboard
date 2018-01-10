@@ -11,19 +11,30 @@
     "build": "./node_modules/.bin/webpack --colors --progress",
     "watch": "yarn run build -- --watch",
     "server": "./node_modules/.bin/webpack-dev-server --inline --open",
-    "test": "jest"
+    "test": "./node_modules/.bin/mocha tests/**/*.spec.js",
+    "test:coverage": "nyc yarn test"
+  },
+  "nyc": {
+    "functions": 80,
+    "lines": 80,
+    "check-coverage": true,
+    "reporter": ["text", "html"],
+    "exclude": ["tests/**"]
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
     "babel-preset-es2015-native-modules": "^6.9.4",
+    "chai": "^4.1.2",
     "eslint": "^4.15.0",
     "eslint-config-airbnb-base": "^12.1.0",
     "eslint-loader": "^1.9.0",
     "eslint-plugin-import": "^2.8.0",
+    "mocha": "^4.1.0",
+    "nyc": "^11.4.1",
     "ramda": "^0.25.0",
     "webpack": "^3.10.0",
-    "webpack-dev-server": "^2.10.1"
+    "webpack-dev-server": "2.7.1"
   },
   "dependencies": {
     "husky": "^0.14.3"
