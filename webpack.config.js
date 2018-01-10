@@ -11,17 +11,23 @@ module.exports = {
     filename: './dist/js/build.js'
   },
   module: {
-    loaders: [
+    rules: [
+      {
+        enforce: "pre",
+        test: /\.js$/,
+        exclude: /node_modules/,
+        loader: "eslint-loader",
+      },
       {
         test: /\.js$/,
-        exclude: /node_modules(?!\/webpack-dev-server)/,
-        loader: 'babel-loader',
+        exclude: /node_modules/,
+        loader: "babel-loader",
         query: {
           presets: [
             ['es2015', { module: false }]
           ]
         }
-      }
+      },
     ]
   },
   plugins: [
