@@ -1,0 +1,21 @@
+{
+  "name": "github-dashboard",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Henrique Melanda <hjdesigner23@gmail.com> (http://www.henriquemelanda.com.br/)",
+  "license": "MIT",
+  "scripts": {
+    "build": "./node_modules/.bin/webpack --colors --progress",
+    "watch": "yarn run build -- --watch",
+    "server": "./node_modules/.bin/webpack-dev-server --inline --open",
+    "test": "jest"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-es2015-native-modules": "^6.9.4",
+    "ramda": "^0.25.0",
+    "webpack": "^3.10.0",
+    "webpack-dev-server": "^2.10.1"
+  }
+}
