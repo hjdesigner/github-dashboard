@@ -1,6 +1,9 @@
+/* global fetch */
 
-function getApiGithub(user) {
-  return user;
-}
+const user = 'hjdesigner';
 
-export default getApiGithub;
+const getApiGithub = query =>
+  fetch(`https://api.github.com/users/${query}`)
+    .then(data => data.json());
+
+export { user, getApiGithub };
