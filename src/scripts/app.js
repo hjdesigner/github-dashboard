@@ -1,4 +1,8 @@
-/* global fetch */
+/* global fetch, document*/
+
+import '../stylus/app.styl';
+
+const teste = document.querySelector('.teste');
 
 const user = 'hjdesigner';
 

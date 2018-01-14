@@ -1,3 +1,4 @@
+/* global document */
 import chai, { expect } from 'chai';
 import sinon from 'sinon';
 import sinonChai from 'sinon-chai';
@@ -6,6 +7,7 @@ chai.use(sinonChai);
 sinonStubPromise(sinon);
 
 global.fetch = require('node-fetch');
+global.window = global.document.defaultView;
 
 import { user, getApiGithub } from '../src/scripts/app';
 

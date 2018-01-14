@@ -1,3 +1,4 @@
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const path = require('path');
 const webpack = require('webpack');
 const nodeENV = process.env.NODE_ENV || 'production';
@@ -28,6 +29,27 @@ module.exports = {
           ]
         }
       },
+      {
+        test: /\.styl$/,
+        use: ExtractTextPlugin.extract({
+          fallback: 'style-loader',
+          use: [
+            {
+              loader: 'css-loader',
+              options: {
+                minimize: true,
+                sourceMap: true
+              }
+            },
+            {
+              loader: 'stylus-loader',
+              options: {
+                sourceMap: true
+              }
+            }
+          ]
+        })
+      },
     ]
   },
   plugins: [
@@ -37,6 +59,11 @@ module.exports = {
     }),
     new webpack.DefinePlugin({
       'process.env': { NODE_ENV: JSON.stringify(nodeENV) }
+    }),
+    new ExtractTextPlugin({
+      filename: './dist/css/app.css',
+      disable: false,
+      allChunks: true
     })
   ]
 }
