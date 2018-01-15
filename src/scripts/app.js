@@ -1,13 +1,12 @@
-/* global fetch, document*/
+
+/* global document */
 
 import '../stylus/app.styl';
 
-const teste = document.querySelector('.teste');
+import getApi from './GetApiGithub';
+import renderProfile from './UserData';
 
-const user = 'hjdesigner';
+const profite = getApi('hjdesigner');
+const elementProfile = document.querySelector('[data-id="profile"]');
 
-const getApiGithub = query =>
-  fetch(`https://api.github.com/users/${query}`)
-    .then(data => data.json());
-
-export { user, getApiGithub };
+profite.then(data => renderProfile(data, elementProfile));

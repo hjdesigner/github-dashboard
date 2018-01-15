@@ -1,4 +1,3 @@
-/* global document */
 import chai, { expect } from 'chai';
 import sinon from 'sinon';
 import sinonChai from 'sinon-chai';
@@ -7,24 +6,21 @@ chai.use(sinonChai);
 sinonStubPromise(sinon);
 
 global.fetch = require('node-fetch');
-global.window = global.document.defaultView;
 
-import { user, getApiGithub } from '../src/scripts/app';
+import getApiGithub from '../src/scripts/GetApiGithub';
 
 describe('App', () => {
 
   describe('smoke tests', () => {
-    it('should User exist', () => {
-      expect(user).to.exist;
-    });
-
+    
     it('should getApiGithub exist', () => {
       expect(getApiGithub).to.exist;
     });
 
-    it('should getApiGithub is function', () => {
+    it('should getApiGithub is a function', () => {
       expect(getApiGithub).to.be.a('function');
-    });  
+    });
+
   });
 
   describe('searchApiGithub', () => {
@@ -48,10 +44,10 @@ describe('App', () => {
   
     it('should receive the correct url to fetch', () => {
       const user = getApiGithub('hjdesigner');
-      expect(fetchedStub).to.have.been.calledWith('https://api.github.com/users/hjdesigner');
+      expect(fetchedStub).to.have.been.calledWith('https://api.github.com/users/hjdesigner?client_id=c4a97816665136973b6a&client_secret=ea906807d9a05b53e73ac3dfb5c4fe30db442510');
   
       const user2 = getApiGithub('grippado');
-      expect(fetchedStub).to.have.been.calledWith('https://api.github.com/users/grippado');      
+      expect(fetchedStub).to.have.been.calledWith('https://api.github.com/users/grippado?client_id=c4a97816665136973b6a&client_secret=ea906807d9a05b53e73ac3dfb5c4fe30db442510');      
     });
 
     it('should return JSON Data from the promise', () => {
@@ -61,5 +57,6 @@ describe('App', () => {
     });
 
   });
+
 
 });

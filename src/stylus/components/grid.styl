@@ -1,0 +1,65 @@
+@import 'variables.styl'
+@import 'mixin.styl'
+
+*,
+*:after,
+*:before
+  margin 0
+  padding 0
+  box-sizing(border-box)
+img
+  width auto
+  max-width 100%
+  height auto
+
+.container-fluid,
+.row
+  &:before,
+  &:after
+    content " "
+    display table
+  &:after
+    clear: both;
+  box-sizing(border-box)
+
+.container-fluid
+  max-width 1360px
+  padding-right 10px
+  padding-left 10px
+  margin-right auto
+  margin-left auto
+
+.row
+  width 100%
+  height auto
+  float left
+
+[class*="hot"]
+ float left
+ padding $padding-columns
+ min-height 1px
+
+for i in (1..$grid-columns)
+  .hot-{i}
+    width 100%
+
+@media only screen and (min-width: 100px)
+  for i in (1..$grid-columns)
+    .hot__mobile-{i}
+      width (100% / 12 * i)
+
+@media only screen and (min-width: $breakpoint-mobile)
+  for i in (1..$grid-columns)
+    .hot-{i}
+      width: (100% / 12 * i)
+  for i in (1..$grid-columns)
+    .hot__tablet-{i}
+      width: (100% / 12 * i)
+
+@media only screen and (min-width: $breakpoint-desktop)
+  for i in (1..$grid-columns)
+    .hot-{i}
+      width: (100% / 12 * i)
+  for i in (1..$grid-columns)
+    .hot__desktop-{i}
+      width: (100% / 12 * i)

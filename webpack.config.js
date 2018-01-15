@@ -11,6 +11,9 @@ module.exports = {
   output: {
     filename: './dist/js/build.js'
   },
+  devServer: {
+    contentBase: path.resolve(__dirname, './dist'),
+  },
   module: {
     rules: [
       {
@@ -31,6 +34,7 @@ module.exports = {
       },
       {
         test: /\.styl$/,
+        exclude: /node_modules/,
         use: ExtractTextPlugin.extract({
           fallback: 'style-loader',
           use: [
