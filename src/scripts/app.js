@@ -1,8 +1,6 @@
 
 /* global document */
 
-import '../stylus/app.styl';
-
 import getApi from './GetApiGithub';
 import renderProfile from './UserData';
 

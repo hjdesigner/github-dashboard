@@ -10,7 +10,8 @@
     "prepush": "yarn run lint",
     "build": "./node_modules/.bin/webpack --colors --progress",
     "watch": "yarn run build -- --watch",
-    "start": "webpack --watch & webpack-dev-server --inline --progress --colors --open",
+    "stylus": "stylus --watch --compress --sourcemap ./src/stylus/app.styl --out ./dist/css/app.css",
+    "start": "yarn run stylus & webpack-dev-server  --inline --open",
     "test": "./node_modules/.bin/mocha tests/**/*.spec.js --require babel-register --require ignore-styles",
     "test:tdd": "./node_modules/.bin/mocha tests/**/*.spec.js --require babel-register --require ignore-styles --watch",
     "test:coverage": "nyc yarn test"
