@@ -40,10 +40,10 @@ describe('Get Api Github Repo', () => {
   
     it('should receive the correct url to fetch', () => {
       const user = getApiGithubRepo('hjdesigner');
-			expect(fetchedStub).to.have.been.calledWith('https://api.github.com/users/hjdesigner/repos?client_id=c4a97816665136973b6a&client_secret=ea906807d9a05b53e73ac3dfb5c4fe30db442510');
+			expect(fetchedStub).to.have.been.calledWith('https://api.github.com/users/hjdesigner/repos?per_page=100&client_id=c4a97816665136973b6a&client_secret=ea906807d9a05b53e73ac3dfb5c4fe30db442510');
   
       const user2 = getApiGithubRepo('grippado');
-			expect(fetchedStub).to.have.been.calledWith('https://api.github.com/users/grippado/repos?client_id=c4a97816665136973b6a&client_secret=ea906807d9a05b53e73ac3dfb5c4fe30db442510');      
+			expect(fetchedStub).to.have.been.calledWith('https://api.github.com/users/grippado/repos?per_page=100&client_id=c4a97816665136973b6a&client_secret=ea906807d9a05b53e73ac3dfb5c4fe30db442510');      
     });
 
     it('should return JSON Data from the promise', () => {

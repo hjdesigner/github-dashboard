@@ -8,11 +8,13 @@ import getApi from './GetApiGithub';
 import getApiRepos from './GetApiGithubRepo';
 import renderProfile from './UserData';
 import renderLanguage from './reposSearchLanguage';
+import renderStarRepository from './reposSearchStar';
 
 const profite = getApi('hjdesigner');
 const reposGetApi = getApiRepos('hjdesigner');
 const elementProfile = document.querySelector('[data-id="profile"]');
 const graphicLanguage = document.querySelector('[data-id="graphic-language"]').getContext('2d');
+const elementListStar = document.querySelector('[data-id="repoPerStarList"]');
 
 profite.then(data => renderProfile(data, elementProfile));
 reposGetApi.then((data) => {
@@ -35,4 +37,5 @@ reposGetApi.then((data) => {
 		},
 	});
 });
+reposGetApi.then(data => renderStarRepository(data, elementListStar));
 
