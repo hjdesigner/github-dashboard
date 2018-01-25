@@ -3,12 +3,11 @@
 /* eslint indent: [2, "tab"] */
 /* eslint	no-tabs: 0 */
 
+import Chart from 'chart.js';
 import getApi from './GetApiGithub';
 import getApiRepos from './GetApiGithubRepo';
 import renderProfile from './UserData';
 import renderLanguage from './reposSearchLanguage';
-
-const Chart = require('chart.js');
 
 const profite = getApi('hjdesigner');
 const reposGetApi = getApiRepos('hjdesigner');

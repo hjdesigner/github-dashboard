@@ -5,7 +5,7 @@
   "author": "Henrique Melanda <hjdesigner23@gmail.com> (http://www.henriquemelanda.com.br/)",
   "license": "MIT",
   "scripts": {
-    "lint": "./node_modules/.bin/eslint src/**/*.js",
+    "lint": "./node_modules/.bin/eslint --fix src/**/*.js",
     "precommit": "yarn run lint",
     "prepush": "yarn run lint",
     "build": "./node_modules/.bin/webpack --colors --progress",
