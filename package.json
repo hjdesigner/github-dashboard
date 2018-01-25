@@ -11,7 +11,7 @@
     "build": "./node_modules/.bin/webpack --colors --progress",
     "watch": "yarn run build -- --watch",
     "stylus": "stylus --watch --compress --sourcemap ./src/stylus/app.styl --out ./dist/css/app.css",
-    "start": "yarn run stylus & webpack-dev-server  --inline --open",
+    "start": "webpack --watch & yarn run stylus & webpack-dev-server  --inline --open",
     "test": "./node_modules/.bin/mocha tests/**/*.spec.js --require babel-register --require ignore-styles",
     "test:tdd": "./node_modules/.bin/mocha tests/**/*.spec.js --require babel-register --require ignore-styles --watch",
     "test:coverage": "nyc yarn test"
@@ -60,6 +60,7 @@
   },
   "dependencies": {
     "babel-polyfill": "^6.26.0",
+    "chart.js": "^2.7.1",
     "husky": "^0.14.3"
   }
 }
