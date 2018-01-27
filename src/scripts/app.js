@@ -6,15 +6,19 @@
 import Chart from 'chart.js';
 import getApi from './GetApiGithub';
 import getApiRepos from './GetApiGithubRepo';
+import getApiContribution from './GetApiGithubContributions';
 import renderProfile from './UserData';
 import renderLanguage from './reposSearchLanguage';
 import renderStarRepository from './reposSearchStar';
+import renderContributions from './reposSearchContributions';
 
 const profite = getApi('hjdesigner');
 const reposGetApi = getApiRepos('hjdesigner');
+const contribuition = getApiContribution('hjdesigner');
 const elementProfile = document.querySelector('[data-id="profile"]');
 const graphicLanguage = document.querySelector('[data-id="graphic-language"]').getContext('2d');
 const elementListStar = document.querySelector('[data-id="repoPerStarList"]');
+const elementContribution = document.querySelector('[data-id="repoPerContributions"]');
 
 profite.then(data => renderProfile(data, elementProfile));
 reposGetApi.then((data) => {
@@ -38,4 +42,5 @@ reposGetApi.then((data) => {
 	});
 });
 reposGetApi.then(data => renderStarRepository(data, elementListStar));
+contribuition.then(data => renderContributions(data.items, elementContribution));
 
