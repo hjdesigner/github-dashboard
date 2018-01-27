@@ -18,5 +18,6 @@ export default function reposSearchStar(data, element) {
 	const maxStar = data.sort((a, b) => b.stargazers_count - a.stargazers_count);
 	const markup = createMarkup(maxStar.slice(0, 10));
 	elementHTML.innerHTML = markup;
+	return data;
 }
 

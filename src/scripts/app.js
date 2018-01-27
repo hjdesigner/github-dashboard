@@ -19,6 +19,7 @@ const elementProfile = document.querySelector('[data-id="profile"]');
 const graphicLanguage = document.querySelector('[data-id="graphic-language"]').getContext('2d');
 const elementListStar = document.querySelector('[data-id="repoPerStarList"]');
 const elementContribution = document.querySelector('[data-id="repoPerContributions"]');
+const arrayNameRepo = [];
 
 profite.then(data => renderProfile(data, elementProfile));
 reposGetApi.then((data) => {
@@ -41,6 +42,9 @@ reposGetApi.then((data) => {
 		},
 	});
 });
-reposGetApi.then(data => renderStarRepository(data, elementListStar));
+reposGetApi.then(data => renderStarRepository(data, elementListStar))
+	.then(data => data.map(nameRepo => arrayNameRepo.push(nameRepo.name)));
 contribuition.then(data => renderContributions(data.items, elementContribution));
+
+console.log(arrayNameRepo);
 
