@@ -5,9 +5,7 @@ const nodeENV = process.env.NODE_ENV || 'production';
 
 module.exports = {
   devtool: 'source-map',
-  entry: {
-    filename: './src/scripts/app.js'
-  },
+  entry:['babel-polyfill', './src/scripts/app.js'],
   output: {
     filename: './dist/js/build.js'
   },

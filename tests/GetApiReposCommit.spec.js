@@ -37,13 +37,13 @@ describe('Get Api Github Repositories Commit', () => {
 		});
 		
 		it('should receive the correct url to fetch', () => {
-			const repoCommit = getApiGithubReposCommit('hjdesigner.github.io', 'hjdesigner');
-			expect(fetchedStub).to.have.been.calledWith('https://api.github.com/repos/hjdesigner/hjdesigner.github.io/commits?client_id=c4a97816665136973b6a&client_secret=ea906807d9a05b53e73ac3dfb5c4fe30db442510');
+			const repoCommit = getApiGithubReposCommit('hjdesigner/hjdesigner.github.io');
+			expect(fetchedStub).to.have.been.calledWith('https://api.github.com/repos/hjdesigner/hjdesigner.github.io/commits?per_page=100&client_id=c4a97816665136973b6a&client_secret=ea906807d9a05b53e73ac3dfb5c4fe30db442510');
 		});
 
 		it('should return JSON Data from the promise', () => {
 			promise.resolves({ login: 'name' });
-			const reposCommitApi = getApiGithubReposCommit('hjdesigner.github.io', 'hjdesigner');
+			const reposCommitApi = getApiGithubReposCommit('hjdesigner/hjdesigner.github.io');
 			expect(reposCommitApi.resolveValue).to.be.eql({ login: 'name' });
 		});
 

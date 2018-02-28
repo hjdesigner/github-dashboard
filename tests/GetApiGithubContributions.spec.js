@@ -40,10 +40,10 @@ describe('Get Api Github Contribuitions', () => {
   
     it('should receive the correct url to fetch', () => {
       const contributions = getApiGithubContributions('hjdesigner');
-			expect(fetchedStub).to.have.been.calledWith('https://api.github.com/search/issues?q=type:pr+is:merged+author:hjdesigner&per_page=100&client_id=c4a97816665136973b6a&client_secret=ea906807d9a05b53e73ac3dfb5c4fe30db442510');
+			expect(fetchedStub).to.have.been.calledWith('https://api.github.com/search/issues?q=type:pr+author:hjdesigner&per_page=100&client_id=c4a97816665136973b6a&client_secret=ea906807d9a05b53e73ac3dfb5c4fe30db442510');
   
       const contributions2 = getApiGithubContributions('grippado');
-			expect(fetchedStub).to.have.been.calledWith('https://api.github.com/search/issues?q=type:pr+is:merged+author:grippado&per_page=100&client_id=c4a97816665136973b6a&client_secret=ea906807d9a05b53e73ac3dfb5c4fe30db442510');
+			expect(fetchedStub).to.have.been.calledWith('https://api.github.com/search/issues?q=type:pr+author:grippado&per_page=100&client_id=c4a97816665136973b6a&client_secret=ea906807d9a05b53e73ac3dfb5c4fe30db442510');
     });
 
     it('should return JSON Data from the promise', () => {
