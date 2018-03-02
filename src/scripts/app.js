@@ -1,7 +1,4 @@
 
-/* global document */
-/* eslint indent: [2, "tab"] */
-/* eslint	no-tabs: 0 */
 
 import Chart from 'chart.js';
 import getApi from './GetApiGithub';
@@ -35,7 +32,7 @@ reposGetApi.then((data) => {
 				borderWidth: 10,
 			},
 			legend: {
-				position: 'left',
+				position: 'top',
 				lineWidth: 10,
 				labels: {
 					boxWidth: 20,
