@@ -10,12 +10,14 @@ import renderLanguage from './reposSearchLanguage';
 import renderStarRepository from './reposSearchStar';
 import renderContributions from './reposSearchContributions';
 import renderCommits from './reposSearchCommit';
+import renderForkRepository from './repoSearchFork';
 
 const profite = getApi('zenorocha');
 const reposGetApi = getApiRepos('zenorocha');
 const contribuition = getApiContribution('zenorocha');
 const elementProfile = document.querySelector('[data-id="profile"]');
 const graphicLanguage = document.querySelector('[data-id="graphic-language"]').getContext('2d');
+const graphicFork = document.querySelector('[data-id="graphic-fork"]').getContext('2d');
 const graphicCommits = document.querySelector('[data-id="graphic-commits"]').getContext('2d');
 const elementListStar = document.querySelector('[data-id="repoPerStarList"]');
 const elementContribution = document.querySelector('[data-id="repoPerContributions"]');
@@ -42,7 +44,28 @@ reposGetApi.then((data) => {
 	});
 });
 reposGetApi
-	.then(data => renderStarRepository(data, elementListStar));
+	.then(data => renderStarRepository(data, elementListStar))
+	.then((data) => {
+		const valueFork = renderForkRepository(data);
+		/* eslint-disable no-unused-vars */
+		const barFork = new Chart(graphicFork, {
+			type: 'pie',
+			data: valueFork,
+			options: {
+				layout: {
+					borderWidth: 10,
+				},
+				legend: {
+					position: 'top',
+					lineWidth: 10,
+					labels: {
+						boxWidth: 20,
+					},
+				},
+			},
+		});
+	});
+
 const repository = [];
 function arrayGet(dados, name, fork) {
 	if (fork === false) {
@@ -52,6 +75,7 @@ function arrayGet(dados, name, fork) {
 		});
 	}
 }
+
 reposGetApi.then((data) => {
 	data.map(dadosCommit => arrayGet(dadosCommit.full_name, dadosCommit.name, dadosCommit.fork));
 	setTimeout(() => {
