@@ -4,7 +4,7 @@
 
 function createMarkup(data) {
 	return data.slice(0, 10).map(dataRepo => `
-		<li class="hot__desktop-4">
+		<li class="hot__mobile-12 hot__tablet-6 hot__desktop-4">
 			<a href="${dataRepo.repository_url}">
 				<div class="repos-per-contributions-item">
 					<h3>${dataRepo.repository_url.replace('https://api.github.com/repos/', '')}</h3>

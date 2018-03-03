@@ -4,7 +4,7 @@
 
 function createMarkup(star) {
 	return star.map(starRepo => `
-		<li class="hot__desktop-4">
+		<li class="hot__mobile-12 hot__tablet-6 hot__desktop-4">
 			<div class="repos-per-star-item">
 				<h3>${starRepo.name}</h3>
 				<p>${starRepo.description}</p>

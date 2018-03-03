@@ -47,7 +47,7 @@ function init() {
 					borderWidth: 10,
 				},
 				legend: {
-					position: 'top',
+					position: 'bottom',
 					lineWidth: 10,
 					labels: {
 						boxWidth: 20,
@@ -69,7 +69,7 @@ function init() {
 						borderWidth: 10,
 					},
 					legend: {
-						position: 'top',
+						position: 'bottom',
 						lineWidth: 10,
 						labels: {
 							boxWidth: 20,
@@ -102,7 +102,7 @@ function init() {
 						borderWidth: 10,
 					},
 					legend: {
-						position: 'top',
+						position: 'bottom',
 						lineWidth: 10,
 						labels: {
 							boxWidth: 20,

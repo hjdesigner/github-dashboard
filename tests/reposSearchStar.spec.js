@@ -14,70 +14,70 @@ describe('Repository Search Star', () => {
 	});
 
 	const markup = `
-		<li class="hot__desktop-4">
+		<li class="hot__mobile-12 hot__tablet-6 hot__desktop-4">
 			<div class="repos-per-star-item">
 				<h3>vibration-api</h3>
 				<p>null</p>
 				<i><svg class="icon-account_balance"><use xlink:href="#icon-read-more" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg></i>
 			</div>
 		</li>
-		<li class="hot__desktop-4">
+		<li class="hot__mobile-12 hot__tablet-6 hot__desktop-4">
 			<div class="repos-per-star-item">
 				<h3>css-padawan</h3>
 				<p>CSS Padawan</p>
 				<i><svg class="icon-account_balance"><use xlink:href="#icon-read-more" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg></i>
 			</div>
 		</li>
-		<li class="hot__desktop-4">
+		<li class="hot__mobile-12 hot__tablet-6 hot__desktop-4">
 			<div class="repos-per-star-item">
 				<h3>css-components</h3>
 				<p>CSS COMPONENTS</p>
 				<i><svg class="icon-account_balance"><use xlink:href="#icon-read-more" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg></i>
 			</div>
 		</li>
-		<li class="hot__desktop-4">
+		<li class="hot__mobile-12 hot__tablet-6 hot__desktop-4">
 			<div class="repos-per-star-item">
 				<h3>battery-status-api</h3>
 				<p>null</p>
 				<i><svg class="icon-account_balance"><use xlink:href="#icon-read-more" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg></i>
 			</div>
 		</li>
-		<li class="hot__desktop-4">
+		<li class="hot__mobile-12 hot__tablet-6 hot__desktop-4">
 			<div class="repos-per-star-item">
 				<h3>CSS-Reference</h3>
 				<p>null</p>
 				<i><svg class="icon-account_balance"><use xlink:href="#icon-read-more" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg></i>
 			</div>
 		</li>
-		<li class="hot__desktop-4">
+		<li class="hot__mobile-12 hot__tablet-6 hot__desktop-4">
 			<div class="repos-per-star-item">
 				<h3>ambient-light-api</h3>
 				<p>Ambient light events are a useful way to make a web page aware of any change in light intensity</p>
 				<i><svg class="icon-account_balance"><use xlink:href="#icon-read-more" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg></i>
 			</div>
 		</li>
-		<li class="hot__desktop-4">
+		<li class="hot__mobile-12 hot__tablet-6 hot__desktop-4">
 			<div class="repos-per-star-item">
 				<h3>sku-color</h3>
 				<p>Ele cria de forma rápida um CSS com todas as cores de sku da loja</p>
 				<i><svg class="icon-account_balance"><use xlink:href="#icon-read-more" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg></i>
 			</div>
 		</li>
-		<li class="hot__desktop-4">
+		<li class="hot__mobile-12 hot__tablet-6 hot__desktop-4">
 			<div class="repos-per-star-item">
 				<h3>css-quiz</h3>
 				<p>CSS Quiz</p>
 				<i><svg class="icon-account_balance"><use xlink:href="#icon-read-more" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg></i>
 			</div>
 		</li>
-		<li class="hot__desktop-4">
+		<li class="hot__mobile-12 hot__tablet-6 hot__desktop-4">
 			<div class="repos-per-star-item">
 				<h3>desafio-daily-css-images</h3>
 				<p>Challenge Daily CSS Images</p>
 				<i><svg class="icon-account_balance"><use xlink:href="#icon-read-more" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg></i>
 			</div>
 		</li>
-		<li class="hot__desktop-4">
+		<li class="hot__mobile-12 hot__tablet-6 hot__desktop-4">
 			<div class="repos-per-star-item">
 				<h3>simple-grid-css</h3>
 				<p>Simple Grid CSS</p>

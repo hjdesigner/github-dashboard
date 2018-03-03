@@ -9,10 +9,10 @@ function getFullYear(date) {
 export default function renderProfile(data, element) {
 	const elementHTML = element;
 	const markup = `
-		<div class="hot__desktop-4">
+		<div class="hot__mobile-12 hot__tablet-12 hot__desktop-4">
 			<img src="${data.avatar_url}" alt="${data.name}">
 		</div>
-		<div class="hot__desktop-8">
+		<div class="hot__mobile-12 hot__tablet-12 hot__desktop-8">
 			<ul>
 				<li><i><svg class="icon-person"><use xlink:href="#icon-person" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg></i>${data.login}</li>
 				<li><i><svg class="icon-files-empty"><use xlink:href="#icon-files-empty" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg></i>${data.public_repos} repositórios</li>

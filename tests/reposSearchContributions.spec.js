@@ -14,7 +14,7 @@ describe('Repository Search Contributions', () => {
 	});
 
 	const markup = `
-		<li class="hot__desktop-4">
+		<li class="hot__mobile-12 hot__tablet-6 hot__desktop-4">
 			<a href="https://api.github.com/repos/grippado/store">
 				<div class="repos-per-contributions-item">
 					<h3>grippado/store</h3>
@@ -23,7 +23,7 @@ describe('Repository Search Contributions', () => {
 			</a>
 		</li>`;
 	const markup2 = `
-		<li class="hot__desktop-4">
+		<li class="hot__mobile-12 hot__tablet-6 hot__desktop-4">
 			<a href="https://api.github.com/repos/grippado/store">
 				<div class="repos-per-contributions-item">
 					<h3>grippado/store</h3>
@@ -31,7 +31,7 @@ describe('Repository Search Contributions', () => {
 				</div>
 			</a>
 		</li>
-		<li class="hot__desktop-4">
+		<li class="hot__mobile-12 hot__tablet-6 hot__desktop-4">
 			<a href="https://api.github.com/repos/willianjusten/volta-mozao">
 				<div class="repos-per-contributions-item">
 					<h3>willianjusten/volta-mozao</h3>
