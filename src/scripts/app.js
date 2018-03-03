@@ -52,8 +52,6 @@ function arrayGet(dados, name, fork) {
 		});
 	}
 }
-
-
 reposGetApi.then((data) => {
 	data.map(dadosCommit => arrayGet(dadosCommit.full_name, dadosCommit.name, dadosCommit.fork));
 	setTimeout(() => {

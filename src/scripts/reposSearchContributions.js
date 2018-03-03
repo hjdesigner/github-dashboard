@@ -3,7 +3,7 @@
 /* eslint	no-tabs: 0 */
 
 function createMarkup(data) {
-	return data.map(dataRepo => `
+	return data.slice(0, 10).map(dataRepo => `
 		<li class="hot__desktop-4">
 			<a href="${dataRepo.repository_url}">
 				<div class="repos-per-contributions-item">
