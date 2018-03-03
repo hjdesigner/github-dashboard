@@ -18,6 +18,7 @@ describe('Repository Search Contributions', () => {
 			<a href="https://api.github.com/repos/grippado/store">
 				<div class="repos-per-contributions-item">
 					<h3>grippado/store</h3>
+					<i><svg class="icon-account_balance"><use xlink:href="#icon-read-more" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg></i>
 				</div>
 			</a>
 		</li>`;
@@ -26,6 +27,7 @@ describe('Repository Search Contributions', () => {
 			<a href="https://api.github.com/repos/grippado/store">
 				<div class="repos-per-contributions-item">
 					<h3>grippado/store</h3>
+					<i><svg class="icon-account_balance"><use xlink:href="#icon-read-more" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg></i>
 				</div>
 			</a>
 		</li>
@@ -33,6 +35,7 @@ describe('Repository Search Contributions', () => {
 			<a href="https://api.github.com/repos/willianjusten/volta-mozao">
 				<div class="repos-per-contributions-item">
 					<h3>willianjusten/volta-mozao</h3>
+					<i><svg class="icon-account_balance"><use xlink:href="#icon-read-more" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg></i>
 				</div>
 			</a>
 		</li>`;

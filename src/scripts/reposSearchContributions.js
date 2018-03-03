@@ -8,6 +8,7 @@ function createMarkup(data) {
 			<a href="${dataRepo.repository_url}">
 				<div class="repos-per-contributions-item">
 					<h3>${dataRepo.repository_url.replace('https://api.github.com/repos/', '')}</h3>
+					<i><svg class="icon-account_balance"><use xlink:href="#icon-read-more" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg></i>
 				</div>
 			</a>
 		</li>`).join('');

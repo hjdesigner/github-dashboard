@@ -2,6 +2,7 @@ import 'jsdom-global/register';
 import chai, { expect } from 'chai';
 
 import reposSearchLanguage from '../src/scripts/reposSearchLanguage';
+import Colors from '../src/scripts/colors';
 
 describe('Repository Search Language', () => {
 	describe('some tests', () => {
@@ -19,13 +20,7 @@ describe('Repository Search Language', () => {
 		datasets: [
 			{
 				fill: true,
-				backgroundColor: [
-					'#5DC4AB',
-					'#5C2751',
-					'#6457A6',
-					'#9DACFF',
-					'#76E5FC',
-				],
+				backgroundColor: Colors,
 				data: [9, 6, 8, 7],
 			},
 		],

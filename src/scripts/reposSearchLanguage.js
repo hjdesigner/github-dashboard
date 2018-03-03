@@ -1,6 +1,5 @@
 
-/* eslint indent: [2, "tab"] */
-/* eslint	no-tabs: 0 */
+import Colors from './colors';
 
 const arrayLanguage = [];
 const arrayLanguageFilter = {};
@@ -25,13 +24,7 @@ export default function reposSearchLanguage(data) {
 		datasets: [
 			{
 				fill: true,
-				backgroundColor: [
-					'#5DC4AB',
-					'#5C2751',
-					'#6457A6',
-					'#9DACFF',
-					'#76E5FC',
-				],
+				backgroundColor: Colors,
 				data: languageValue,
 			},
 		],

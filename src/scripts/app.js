@@ -11,9 +11,9 @@ import renderStarRepository from './reposSearchStar';
 import renderContributions from './reposSearchContributions';
 import renderCommits from './reposSearchCommit';
 
-const profite = getApi('hjdesigner');
-const reposGetApi = getApiRepos('hjdesigner');
-const contribuition = getApiContribution('hjdesigner');
+const profite = getApi('zenorocha');
+const reposGetApi = getApiRepos('zenorocha');
+const contribuition = getApiContribution('zenorocha');
 const elementProfile = document.querySelector('[data-id="profile"]');
 const graphicLanguage = document.querySelector('[data-id="graphic-language"]').getContext('2d');
 const graphicCommits = document.querySelector('[data-id="graphic-commits"]').getContext('2d');
