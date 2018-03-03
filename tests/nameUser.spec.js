@@ -1,11 +1,19 @@
 import 'jsdom-global/register';
 import chai, { expect } from 'chai';
+import NameUser from '../src/scripts/components/nameUser.js';
 
-import renderProfile from '../src/scripts/components/UserData';
 
-describe('UserData', () => {
+describe('User Name', () => {
+	describe('Some tests', () => {
+		it('should NameUser exit', () => {
+			expect(NameUser).to.exist;
+		});
+		it('should NameUser is a function', () => {
+			expect(NameUser).to.be.a('function');
+		});
+	});
 
-  const data = {
+	const data = {
     "login": "hjdesigner",
     "id": 2280313,
     "avatar_url": "https://avatars3.githubusercontent.com/u/2280313?v=4",
@@ -36,31 +44,15 @@ describe('UserData', () => {
     "following": 45,
     "created_at": "2012-09-04T20:31:09Z",
     "updated_at": "2017-12-23T20:27:57Z"
-  }
+	}
 
-  const markup = `
-		<div class="hot__desktop-4">
-			<img src="https://avatars3.githubusercontent.com/u/2280313?v=4" alt="Henrique Rodrigues">
-		</div>
-		<div class="hot__desktop-8">
-			<ul>
-				<li><i><svg class="icon-person"><use xlink:href="#icon-person" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg></i>hjdesigner</li>
-				<li><i><svg class="icon-files-empty"><use xlink:href="#icon-files-empty" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg></i>53 repositórios</li>
-				<li><i><svg class="icon-clock"><use xlink:href="#icon-clock" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg></i>No Github há 6 anos</li>
-				<li><i><svg class="icon-mail"><use xlink:href="#icon-mail" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg></i>hjdesigner23@gmail.com</li>
-				<li><i><svg class="icon-account_balance"><use xlink:href="#icon-account_balance" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg></i>@saraiva</li>
-			</ul>
-		</div>
-	`;
+	const markup = `<a href="https://github.com/hjdesigner">Henrique Rodrigues</a>`;
 
-  it('should exist', () => {
-    expect(renderProfile).to.exist;
-  });
+	it('should create and append the markup give a correct data and markup', () => {
+		const element = document.createElement('div');
+		NameUser(data, element);
+		expect(element.innerHTML).to.be.eql(markup);
+	});
 
-  it('should create and append the markup given a corret data and markup', () => {
-    const element = document.createElement('div');
-    renderProfile(data, element);
-    expect(element.innerHTML).to.be.eql(markup);
-  });
-  
+
 });

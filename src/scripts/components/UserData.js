@@ -23,5 +23,6 @@ export default function renderProfile(data, element) {
 		</div>
 	`;
 	elementHTML.innerHTML = markup;
+	return data;
 }
 

@@ -7,7 +7,7 @@ sinonStubPromise(sinon);
 
 global.fetch = require('node-fetch');
 
-import getApiGithubRepo from '../src/scripts/GetApiGithubRepo';
+import getApiGithubRepo from '../src/scripts/get/GetApiGithubRepo';
 
 describe('Get Api Github Repo', () => {
   describe('some tests', () => {

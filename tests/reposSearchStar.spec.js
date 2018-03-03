@@ -1,7 +1,7 @@
 import 'jsdom-global/register';
 import chai, { expect } from 'chai';
 
-import reposSearchStar from '../src/scripts/reposSearchStar';
+import reposSearchStar from '../src/scripts/components/reposSearchStar';
 
 describe('Repository Search Star', () => {
 	describe('some tests', () => {

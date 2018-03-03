@@ -1,8 +1,8 @@
 import 'jsdom-global/register';
 import chai, { expect } from 'chai';
 
-import repoSearchFork from '../src/scripts/repoSearchFork';
-import Colors from '../src/scripts/colors';
+import repoSearchFork from '../src/scripts/components/repoSearchFork';
+import Colors from '../src/scripts/components/colors';
 
 describe('Repository Search Fork', () => {
 	describe('Some tests', () => {

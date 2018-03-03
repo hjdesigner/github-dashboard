@@ -1,7 +1,7 @@
 import chai, { expect } from 'chai';
 
-import reposSearchCommit from '../src/scripts/reposSearchCommit';
-import Colors from '../src/scripts/colors';
+import reposSearchCommit from '../src/scripts/components/reposSearchCommit';
+import Colors from '../src/scripts/components/colors';
 
 describe('Repository Search Commits', () => {
 	describe('some tests', () => {

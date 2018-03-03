@@ -1,8 +1,8 @@
 import 'jsdom-global/register';
 import chai, { expect } from 'chai';
 
-import reposSearchLanguage from '../src/scripts/reposSearchLanguage';
-import Colors from '../src/scripts/colors';
+import reposSearchLanguage from '../src/scripts/components/reposSearchLanguage';
+import Colors from '../src/scripts/components/colors';
 
 describe('Repository Search Language', () => {
 	describe('some tests', () => {
