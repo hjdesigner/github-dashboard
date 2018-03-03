@@ -1,6 +1,7 @@
 import chai, { expect } from 'chai';
 
 import reposSearchCommit from '../src/scripts/reposSearchCommit';
+import Colors from '../src/scripts/colors';
 
 describe('Repository Search Commits', () => {
 	describe('some tests', () => {
@@ -179,13 +180,7 @@ describe('Repository Search Commits', () => {
 			datasets: [
 				{
 					fill: true,
-					backgroundColor: [
-						'#5DC4AB',
-						'#5C2751',
-						'#6457A6',
-						'#9DACFF',
-						'#76E5FC',
-					],
+					backgroundColor: Colors,
 					data: [100, 89, 67, 36, 30, 21, 20, 19, 18, 16],
 				},
 			],
@@ -195,13 +190,7 @@ describe('Repository Search Commits', () => {
 			datasets: [
 				{
 					fill: true,
-					backgroundColor: [
-						'#5DC4AB',
-						'#5C2751',
-						'#6457A6',
-						'#9DACFF',
-						'#76E5FC',
-					],
+					backgroundColor: Colors,
 					data: [100, 89, 67],
 				},
 			],
