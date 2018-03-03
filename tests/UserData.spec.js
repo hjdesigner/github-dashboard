@@ -39,10 +39,10 @@ describe('UserData', () => {
   }
 
   const markup = `
-		<div class="hot__mobile-12 hot__tablet-12 hot__desktop-4">
+		<div class="hot__mobile-12 hot__tablet-12 hot__desktop-5">
 			<img src="https://avatars3.githubusercontent.com/u/2280313?v=4" alt="Henrique Rodrigues">
 		</div>
-		<div class="hot__mobile-12 hot__tablet-12 hot__desktop-8">
+		<div class="hot__mobile-12 hot__tablet-12 hot__desktop-7">
 			<ul>
 				<li><i><svg class="icon-person"><use xlink:href="#icon-person" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg></i>hjdesigner</li>
 				<li><i><svg class="icon-files-empty"><use xlink:href="#icon-files-empty" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg></i>53 repositórios</li>
