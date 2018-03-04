@@ -117,14 +117,18 @@ function init() {
 	contribuition.then(data => renderContributions(data.items, elementContribution));
 }
 
+function urlShare() {
+	elementLinkfacebook.setAttribute('href', `http://www.facebook.com/sharer.php?u=http://meucurriculo.github.io?${urlUser}`);
+	elementLinkTwitter.setAttribute('href', `http://twitter.com/share?text=Confira+de+uma+forma+diferente+um+resumo+do+meu+GitHub&url=https%3A%2F%2Fmeucurriculo.github.io?${urlUser}`);
+}
+
 if (urlUser !== undefined) {
 	elementForm.classList.add('hide');
 	elementGitProfile.classList.remove('hide');
 	profite = getApi(urlUser);
 	reposGetApi = getApiRepos(urlUser);
 	contribuition = getApiContribution(urlUser);
-	elementLinkfacebook.setAttribute('href', `http://www.facebook.com/sharer.php?u=http://meucurriculo.github.io?${urlUser}`);
-	elementLinkTwitter.setAttribute('href', `http://twitter.com/share?text=Confira+de+uma+forma+diferente+um+resumo+do+meu+GitHub&url=https%3A%2F%2Fmeucurriculo.github.io?${urlUser}`);
+	urlShare();
 	init();
 } else {
 	elementForm.classList.remove('hide');
@@ -136,6 +140,7 @@ button.addEventListener('click', (event) => {
 	profite = getApi(user);
 	reposGetApi = getApiRepos(user);
 	contribuition = getApiContribution(user);
+	urlShare();
 	init();
 	elementForm.classList.add('hide');
 	elementGitProfile.classList.remove('hide');
