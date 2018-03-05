@@ -28,6 +28,7 @@ const elementTitle = document.querySelector('[data-id="nameTitle"]');
 const elementNameInfo = document.querySelector('[data-id="nameInfo"]');
 const elementLinkfacebook = document.querySelector('[data-id="linkFacebook"]');
 const elementLinkTwitter = document.querySelector('[data-id="linkTwitter"]');
+const elementError = document.querySelector('[data-id="error"]');
 const input = document.querySelector('[data-id="inputUser"]');
 const button = document.querySelector('[data="search"]');
 const url = window.location.href;
@@ -117,9 +118,9 @@ function init() {
 	contribuition.then(data => renderContributions(data.items, elementContribution));
 }
 
-function urlShare() {
-	elementLinkfacebook.setAttribute('href', `http://www.facebook.com/sharer.php?u=http://meucurriculo.github.io?${urlUser}`);
-	elementLinkTwitter.setAttribute('href', `http://twitter.com/share?text=Confira+de+uma+forma+diferente+um+resumo+do+meu+GitHub&url=https%3A%2F%2Fmeucurriculo.github.io?${urlUser}`);
+function urlShare(user) {
+	elementLinkfacebook.setAttribute('href', `http://www.facebook.com/sharer.php?u=http://meucurriculo.github.io?${user}`);
+	elementLinkTwitter.setAttribute('href', `http://twitter.com/share?text=Confira+de+uma+forma+diferente+um+resumo+do+meu+GitHub&url=https%3A%2F%2Fmeucurriculo.github.io?${user}`);
 }
 
 if (urlUser !== undefined) {
@@ -128,20 +129,37 @@ if (urlUser !== undefined) {
 	profite = getApi(urlUser);
 	reposGetApi = getApiRepos(urlUser);
 	contribuition = getApiContribution(urlUser);
-	urlShare();
-	init();
+	profite.then((data) => {
+		if (data.message) {
+			elementForm.classList.remove('hide');
+			elementGitProfile.classList.add('hide');
+			elementError.classList.remove('hide');
+		} else {
+			urlShare(urlUser);
+			init();
+		}
+	});
 } else {
 	elementForm.classList.remove('hide');
 	elementGitProfile.classList.add('hide');
 }
 button.addEventListener('click', (event) => {
 	event.preventDefault();
+	window.history.pushState('', '', '/');
 	const user = input.value;
 	profite = getApi(user);
 	reposGetApi = getApiRepos(user);
 	contribuition = getApiContribution(user);
-	urlShare();
-	init();
 	elementForm.classList.add('hide');
 	elementGitProfile.classList.remove('hide');
+	profite.then((data) => {
+		if (data.message) {
+			elementForm.classList.remove('hide');
+			elementGitProfile.classList.add('hide');
+			elementError.classList.remove('hide');
+		} else {
+			urlShare(user);
+			init();
+		}
+	});
 });
