@@ -119,8 +119,8 @@ function init() {
 }
 
 function urlShare(user) {
-	elementLinkfacebook.setAttribute('href', `http://www.facebook.com/sharer.php?u=http://meucurriculo.github.io?${user}`);
-	elementLinkTwitter.setAttribute('href', `http://twitter.com/share?text=Confira+de+uma+forma+diferente+um+resumo+do+meu+GitHub&url=https%3A%2F%2Fmeucurriculo.github.io?${user}`);
+	elementLinkfacebook.setAttribute('href', `http://www.facebook.com/sharer.php?u=https://meu-curriculo.wedeploy.io/?${user}`);
+	elementLinkTwitter.setAttribute('href', `http://twitter.com/share?text=Confira+de+uma+forma+diferente+um+resumo+do+meu+GitHub&url=https%3A%2F%2Fmeu-curriculo.wedeploy.io/?${user}`);
 }
 
 if (urlUser !== undefined) {
