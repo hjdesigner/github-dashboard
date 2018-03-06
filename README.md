@@ -13,7 +13,7 @@ Screenshot
 > Requisitos do projeto
 * NodeJS
 * Webpack
-* Stylus
+* Stylust
 * Javascript/ES6
 * Mocha
 * Chai
@@ -44,3 +44,7 @@ Screenshot
 
 > Contribuindo
 * Depois de fazer sua mágica abra uma PR descreve sua contribuição.
+
+## Galera que ajuda esse projeto
+
+* ![Caio Incau](https://github.com/caioincau)
