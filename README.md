@@ -47,4 +47,4 @@ Screenshot
 
 ## Galera que ajuda esse projeto
 
-![Caio Incau](https://github.com/caioincau)
+* [Caio Incau](https://github.com/caioincau)
