@@ -8,7 +8,7 @@ const getApiGithubContributions = query =>
 		.then(data => data.json())
 		.then((json) => {
 			const jsonWithFilter = Object.create(json);
-			jsonWithFilter.items = removeDuplicates(json.items, 'repository_url');
+			if (json.items.length > 0) jsonWithFilter.items = removeDuplicates(json.items, 'repository_url');
 			return jsonWithFilter;
 		});
 
