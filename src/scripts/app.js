@@ -160,6 +160,7 @@ button.addEventListener('click', (event) => {
 		} else {
 			urlShare(user);
 			init();
+			window.history.pushState(null, null, `?${user}`);
 		}
 	});
 });
