@@ -18,7 +18,7 @@ describe('Repository Search Star', () => {
 			<a href="https://github.com/hjdesigner/vibration-api">
 				<div class="repos-per-star-item">
 					<h3>vibration-api</h3>
-					<p>null</p>
+					<p></p>
 					<i><svg class="icon-account_balance"><use xlink:href="#icon-read-more" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg></i>
 				</div>
 			</a>

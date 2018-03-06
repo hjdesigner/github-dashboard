@@ -8,7 +8,7 @@ function createMarkup(star) {
 			<a href="${starRepo.html_url}">
 				<div class="repos-per-star-item">
 					<h3>${starRepo.name}</h3>
-					<p>${starRepo.description}</p>
+					<p>${starRepo.description !== null ? starRepo.description : ''}</p>
 					<i><svg class="icon-account_balance"><use xlink:href="#icon-read-more" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg></i>
 				</div>
 			</a>
