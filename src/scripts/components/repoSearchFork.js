@@ -6,8 +6,10 @@ const arrayAmount = [];
 
 function generatorArray(content) {
 	content.map((item) => {
-		arrayName.push(item.name);
-		arrayAmount.push(item.forks_count);
+		if (item.forks_count > 0) {
+			arrayName.push(item.name);
+			arrayAmount.push(item.forks_count);
+		}
 		return false;
 	});
 }
