@@ -32,7 +32,6 @@ const elementError = document.querySelector('[data-id="error"]');
 const input = document.querySelector('[data-id="inputUser"]');
 const button = document.querySelector('[data="search"]');
 const url = window.location.href;
-const urlUser = url.split('/?')[1];
 
 function init() {
 	profite
@@ -123,44 +122,44 @@ function urlShare(user) {
 	elementLinkTwitter.setAttribute('href', `http://twitter.com/share?text=Confira+de+uma+forma+diferente+um+resumo+do+meu+GitHub&url=https%3A%2F%2Fmeu-curriculo.wedeploy.io/?${user}`);
 }
 
-if (urlUser !== undefined) {
-	elementForm.classList.add('hide');
-	elementGitProfile.classList.remove('hide');
-	profite = getApi(urlUser);
-	reposGetApi = getApiRepos(urlUser);
-	contribuition = getApiContribution(urlUser);
-	profite.then((data) => {
-		if (data.message) {
-			elementForm.classList.remove('hide');
-			elementGitProfile.classList.add('hide');
-			elementError.classList.remove('hide');
-		} else {
-			urlShare(urlUser);
-			init();
-		}
-	});
-} else {
-	elementForm.classList.remove('hide');
-	elementGitProfile.classList.add('hide');
-}
-button.addEventListener('click', (event) => {
-	event.preventDefault();
-	window.history.pushState('', '', '/');
-	const user = input.value;
+function getUser(urlUser) {
+	const user = urlUser.includes('/?') ? url.split('/?')[1] : urlUser;
+
 	profite = getApi(user);
 	reposGetApi = getApiRepos(user);
 	contribuition = getApiContribution(user);
 	elementForm.classList.add('hide');
 	elementGitProfile.classList.remove('hide');
-	profite.then((data) => {
+
+	return profite.then((data) => {
 		if (data.message) {
 			elementForm.classList.remove('hide');
 			elementGitProfile.classList.add('hide');
 			elementError.classList.remove('hide');
-		} else {
-			urlShare(user);
-			init();
-			window.history.pushState(null, null, `?${user}`);
+			return false;
 		}
+
+		urlShare(urlUser);
+		init();
+		return urlUser.includes('/?') ? false : window.history.pushState(null, null, `?${user}`);
 	});
+}
+
+function loadPage(urlUser) {
+	if (urlUser.slice(-1) === '/') {
+		elementForm.classList.remove('hide');
+		elementGitProfile.classList.add('hide');
+		return false;
+	}
+
+	return getUser(urlUser);
+}
+
+button.addEventListener('click', (event) => {
+	event.preventDefault();
+	window.history.pushState('', '', '/');
+	const user = input.value;
+	getUser(user);
 });
+
+loadPage(url);
