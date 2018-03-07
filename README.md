@@ -48,3 +48,4 @@ Screenshot
 ## Galera que ajuda esse projeto
 
 * [Caio Incau](https://github.com/caioincau)
+* [Rogerio Moura](https://github.com/Rogerfm)
