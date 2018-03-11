@@ -17,8 +17,10 @@ export default function renderProfile(data, element) {
 		<div class="hot__mobile-12 hot__tablet-12 hot__desktop-7">
 			<ul>
 				<li><i><svg class="icon-person"><use xlink:href="#icon-person" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg></i>${data.login}</li>
-				<li><i><svg class="icon-files-empty"><use xlink:href="#icon-files-empty" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg></i>${data.public_repos} repositórios</li>
-				<li><i><svg class="icon-clock"><use xlink:href="#icon-clock" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg></i>No Github há ${getFullYear(data.created_at)} anos</li>
+				<li data-language="pt"><i><svg class="icon-files-empty"><use xlink:href="#icon-files-empty" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg></i>${data.public_repos} repositórios</li>
+				<li data-language="en"><i><svg class="icon-files-empty"><use xlink:href="#icon-files-empty" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg></i>${data.public_repos} repositories</li>
+				<li data-language="pt"><i><svg class="icon-clock"><use xlink:href="#icon-clock" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg></i>No Github há ${getFullYear(data.created_at)} anos</li>
+				<li data-language="en"><i><svg class="icon-clock"><use xlink:href="#icon-clock" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg></i>In Github there are ${getFullYear(data.created_at)} years</li>
 				${emailItem}
 				${companyItem}
 			</ul>

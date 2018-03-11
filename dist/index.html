@@ -1,6 +1,7 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
+	<meta http-equiv="Content-Language" content="pt-br">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -29,7 +30,6 @@
   <meta name="author" content="Front-End Community"/>
   <meta property="og:url"           content="https://meu-curriculo.wedeploy.io" />
   <meta property="og:type"          content="website" />
-  <meta property="og:title"         content="Meu Currículo GitHub" />
   <meta property="og:description"   content="Confira de uma forma diferente um resumo do meu github" />
   <meta property="og:image"         content="https://meu-curriculo.wedeploy.io/images/capa.jpg" />
   <meta name="twitter:card" content="summary_large_image">
@@ -37,7 +37,7 @@
   <meta name="twitter:title" content="Meu Curriculo Github">
   <meta name="twitter:description" content="Confira de uma forma diferente um resumo do meu github">
   <meta property="twitter:image:src" content="https://meu-curriculo.wedeploy.io/images/capa.jpg">
-	<title>Meu Currículo GitHub</title>
+	<title></title>
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-19817494-15"></script>
 	<script>
@@ -96,14 +96,14 @@
 				<div class="form-user-logo">
 					<img src="./images/logo.png" alt="currrilo github">
 				</div>
-				<h2>Digite o usuário do GitHub</h2>
+				<h2 data-id="titleForm"></h2>
 				<form action="">
 					<input type="text" data-id="inputUser" autofocus>
-					<button data="search">Procurar</button>
+					<button data="search" data-id="textButton"></button>
 				</form>
 				<p class="error hide" data-id="error">Usúario não encontrado</p>
-				<p>Se você tentou usar e por acaso não retornou as informações verifiquem se o nome de usuário esta correto ou tente mais tarde.</p>
-				<p>Isso é necessário porque o GitHub possui um limite de 5000 request por hora que seria alcançado muito rapidamente se você tentou pesquisar por um perfil de uma pessoa F#$#% no GitHub.</p>
+				<p data-id="textForm1"></p>
+				<p data-id="textForm2"></p>
 			</div>
 		</div>
 			
@@ -114,10 +114,11 @@
     <div class="container-fluid">
       <div class="row">
         <div class="social hot-12">
-          <ul class="social-networks hot__desktop-3">
-            <p>Compartilhe sua pagina:</p>
+					<ul class="social-networks hot__desktop-3">
+            	<p data-id>Compartilhe sua pagina:</p>
 						<li><a href="" target="_blank" data-id="linkFacebook"><i><svg class="icon-facebook"><use xlink:href="#icon-facebook" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg></i></a></li>
-						<li><a href="" data-id="linkTwitter" target="_blank"><i><svg class="icon-twitter"><use xlink:href="#icon-twitter" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg></i></a></li>
+						<li data-language="pt"><a href="" data-id="linkTwitter" target="_blank"><i><svg class="icon-twitter"><use xlink:href="#icon-twitter" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg></i></a></li>
+						<li data-language="en"><a href="" data-id="linkTwitterEn" target="_blank"><i><svg class="icon-twitter"><use xlink:href="#icon-twitter" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg></i></a></li>
           </ul>
         </div>
         <div class="hot-12">
@@ -136,8 +137,8 @@
 				</div>
 				<div class="hot__mobile-12 hot__tablet-7 hot__desktop-7">
 					<div class="info-github">
-						<p>Esta pagina é gerada automaticamente usando informações públicas da conta GitHub do desenvolvedor.</p>
-						<p>A API retorna no máximo 100 resultado de cada informação mostrada abaixo, então não hesite em visitar a página <span data-id="nameInfo"></span> no Github para obter um histórico completo.</p>
+							<p data-id="info1"></p>
+							<p data-id="info2"></p>
 					</div>					
 				</div>
         
@@ -147,27 +148,27 @@
 		
 				<div class="hot__mobile-12 hot__tablet-12 hot__desktop-12">
 					<div class="repos-per-star">
-						<h2>Top 10 repositórios por star</h2>
+						<h2 data-id="star"></h2>
 						<ul class="repos-per-star-list" data-id="repoPerStarList">
 							<img src="./images/pacman.gif" alt="Loader">
 						</ul>
 					</div>
 					<div class="repos-per-graphic">
 						<div class="repos-per-language hot__mobile-12 hot__tablet-12 hot__desktop-4">
-							<h2>Linguagem dos repositórios</h2>
+							<h2 data-id="language"></h2>
 							<canvas data-id="graphic-language" width="100vw" height="100vw"></canvas>
           	</div>
 						<div class="repos-per-fork hot__mobile-12 hot__tablet-12 hot__desktop-4">
-							<h2>Top 10 repositórios por fork</h2>
+							<h2 data-id="fork"></h2>
 							<canvas data-id="graphic-fork" width="100vw" height="100vw"></canvas>
 						</div>
 						<div class="repos-per-commits hot__mobile-12 hot__tablet-12 hot__desktop-4">
-							<h2>Top 10 commits por repositórios</h2>
+							<h2 data-id="commits"></h2>
 							<canvas data-id="graphic-commits" width="100vw" height="100vw"></canvas>
 						</div>
 					</div>
 					<div class="repos-per-contributions">
-						<h2>Repositórios contribuídos</h2>
+						<h2 data-id="contributed"></h2>
 						<ul class="repos-per-contributions-list" data-id="repoPerContributions">
 							<img src="./images/pacman.gif" alt="Loader">
 						</ul>
@@ -184,7 +185,7 @@
 </section>
 
 	<footer>
-		<p> Projeto Open Source <3 - <a href="https://github.com/hjdesigner/github-dashboard">GitHub</a></p>
+		<p data-id="textFooter"></p>
 	</footer>
   <script src="./js/build.js"></script>
 </body>

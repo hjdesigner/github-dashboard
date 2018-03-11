@@ -45,8 +45,10 @@ describe('UserData', () => {
 		<div class="hot__mobile-12 hot__tablet-12 hot__desktop-7">
 			<ul>
 				<li><i><svg class="icon-person"><use xlink:href="#icon-person" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg></i>hjdesigner</li>
-				<li><i><svg class="icon-files-empty"><use xlink:href="#icon-files-empty" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg></i>53 repositórios</li>
-				<li><i><svg class="icon-clock"><use xlink:href="#icon-clock" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg></i>No Github há 6 anos</li>
+				<li data-language="pt"><i><svg class="icon-files-empty"><use xlink:href="#icon-files-empty" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg></i>53 repositórios</li>
+				<li data-language="en"><i><svg class="icon-files-empty"><use xlink:href="#icon-files-empty" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg></i>53 repositories</li>
+				<li data-language="pt"><i><svg class="icon-clock"><use xlink:href="#icon-clock" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg></i>No Github há 6 anos</li>
+				<li data-language="en"><i><svg class="icon-clock"><use xlink:href="#icon-clock" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg></i>In Github there are 6 years</li>
 				<li><i><svg class="icon-mail"><use xlink:href="#icon-mail" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg></i>hjdesigner23@gmail.com</li>
 				<li><i><svg class="icon-account_balance"><use xlink:href="#icon-account_balance" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg></i>@saraiva</li>
 			</ul>

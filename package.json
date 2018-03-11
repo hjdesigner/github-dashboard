@@ -61,6 +61,8 @@
   "dependencies": {
     "babel-polyfill": "^6.26.0",
     "chart.js": "^2.7.1",
-    "husky": "^0.14.3"
+    "husky": "^0.14.3",
+    "i18next": "^10.5.0",
+    "i18next-browser-languagedetector": "^2.1.0"
   }
 }

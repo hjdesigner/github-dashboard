@@ -1,0 +1,38 @@
+body
+	&.en
+		[data-language="pt"] 
+			display none
+		[data-language="en"] 
+			display inline-block
+		.user-data
+			li
+				&[data-language="en"]
+					display flex
+		header
+			.social-networks
+				li
+					&[data-language="en"]
+						display flex
+
+[data-language="pt"] 
+	width 100%
+	display inline-block
+[data-language="en"] 
+	width 100%
+	display none
+
+.social-networks
+	[data-language="pt"],
+	[data-language="en"]
+		width auto
+
+.user-data
+	li
+		&[data-language="en"]
+			display none
+
+header
+	.social-networks
+		li
+			&[data-language="en"]
+				display none
