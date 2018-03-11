@@ -50,6 +50,7 @@ function updateContent() {
 	document.querySelector('[data-id="fork"]').innerHTML = i18next.t('fork');
 	document.querySelector('[data-id="commits"]').innerHTML = i18next.t('commits');
 	document.querySelector('[data-id="contributed"]').innerHTML = i18next.t('contributed');
+	document.querySelector('[data-id="share"]').innerHTML = i18next.t('share');
 	document.querySelector('title').innerHTML = i18next.t('title');
 }
 i18next
