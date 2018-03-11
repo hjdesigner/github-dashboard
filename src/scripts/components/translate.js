@@ -1,7 +1,6 @@
 
 const objectLanguage = {
 	fallbackLng: 'en',
-	debug: true,
 	resources: {
 		en: {
 			translation: {

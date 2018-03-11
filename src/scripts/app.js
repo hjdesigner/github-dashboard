@@ -35,9 +35,6 @@ const elementError = document.querySelector('[data-id="error"]');
 const input = document.querySelector('[data-id="inputUser"]');
 const button = document.querySelector('[data="search"]');
 const url = window.location.href;
-// const lngDetector = new LngDetector();
-const lngDetector = new LngDetector();
-console.log(lngDetector.init());
 function updateContent() {
 	document.querySelector('body').classList.add(i18next.t('bodyLanguage'));
 	document.querySelector('[data-id="titleForm"]').innerHTML = i18next.t('titleForm');
