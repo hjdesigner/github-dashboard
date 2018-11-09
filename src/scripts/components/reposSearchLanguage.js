@@ -14,10 +14,9 @@ function language(cont) {
 			arrayLanguageFilter[item] = (arrayLanguageFilter[item] || 0) + 1;
 			return arrayLanguageFilter;
 		});
-	Object.keys(arrayLanguageFilter).map((item) => {
+	Object.keys(arrayLanguageFilter).forEach((item) => {
 		languageValue.push(arrayLanguageFilter[item]);
 		languageType.push(item);
-		return true;
 	});
 }
 
