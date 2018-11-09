@@ -8,12 +8,16 @@ const languageValue = [];
 
 function language(cont) {
 	cont.map(elem => arrayLanguage.push(elem.language));
-	arrayLanguage.forEach((item) => {
-		arrayLanguageFilter[item] = (arrayLanguageFilter[item] || 0) + 1;
-	});
-	Object.keys(arrayLanguageFilter).forEach((item) => {
+	arrayLanguage
+		.filter(item => item != null)
+		.map((item) => {
+			arrayLanguageFilter[item] = (arrayLanguageFilter[item] || 0) + 1;
+			return arrayLanguageFilter;
+		});
+	Object.keys(arrayLanguageFilter).map((item) => {
 		languageValue.push(arrayLanguageFilter[item]);
 		languageType.push(item);
+		return true;
 	});
 }
 
