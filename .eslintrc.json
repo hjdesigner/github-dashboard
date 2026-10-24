@@ -1,15 +1,29 @@
 {
-    "extends": "airbnb-base",
-		"env": {
-    	"browser": true,
-    	"node": true
-  	},
-		"globals": {
-			"document": false		  
-		},
-		"rules": {
-        "indent": [2, "tab"],
-        "no-tabs": 0,
-				"no-unused-vars": ["error", { "vars": "all", "args": "after-used" }]
-    }
+	"type": "module",
+	"scripts": {
+		"prepare": "husky",
+
+		"lint": "eslint .",
+		"lint:fix": "eslint . --fix",
+
+		"format": "prettier . --write",
+		"format:check": "prettier . --check",
+
+		"test": "vitest run",
+		"test:watch": "vitest",
+
+		"check": "npm run lint && npm run format:check && npm run test"
+	},
+	"lint-staged": {
+		"*.{js,mjs,cjs}": [
+			"eslint --cache --fix",
+			"prettier --write"
+		],
+		"src/**/*.{js,mjs,cjs}": [
+			"vitest related --run"
+		],
+		"*.{json,md,yaml,yml}": [
+			"prettier --write"
+		]
+	}
 }
